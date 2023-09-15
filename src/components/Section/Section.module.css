@@ -1,0 +1,8 @@
+.headline {
+    .section-header {
+  font-size: 36px; /* Zwiększamy rozmiar fontu dla nagłówka */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* Biały kolor tekstu */
+}
+}

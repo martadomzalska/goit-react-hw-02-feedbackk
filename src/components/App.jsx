@@ -1,7 +1,7 @@
-import { Feedback } from "./Feedback/Feedback";
+import { Widget } from "./Widget/Widget";
 
 export const App = () => {
   return (
-  <Feedback/>
+        <Widget/>
   );
 };
