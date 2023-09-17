@@ -4,7 +4,6 @@ import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
 import { Section } from 'components/Section/Section';
 import css from './Widget.module.css';
 
-
 export class Widget extends Component {
   state = {
     good: 0,
@@ -18,17 +17,20 @@ export class Widget extends Component {
 
     switch (option) {
       case 'good':
-        return this.setState({
+        this.setState({
           good: this.state.good + 1,
         });
+        break;
       case 'neutral':
         this.setState({
           neutral: this.state.neutral + 1,
         });
+        break;
       case 'bad':
         this.setState({
           bad: this.state.bad + 1,
         });
+        break;
 
       default:
         break;
@@ -42,9 +44,10 @@ export class Widget extends Component {
   //counting positive percentage of total amount
   countPositiveFeedbackPercentage = () => {
     const total = this.countTotalFeedback();
-    const positiveFeedbackPercentage = Math.round(
-      (this.state.good / total) * 100
-    );
+    const positiveFeedbackPercentage = (
+      (this.state.good / total) *
+      100
+    ).toFixed(2);
     if (this.state.good > 0) {
       return positiveFeedbackPercentage;
     } else {
@@ -55,7 +58,7 @@ export class Widget extends Component {
   render() {
     return (
       <div className={css.container}>
-        <Section title="Please leave feedback">
+        <Section title="Please leave feedback:">
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveMessage={this.updateFeedback}

@@ -1,0 +1,18 @@
+.text {
+  color: #434044;
+  padding: 0px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.statistics_table {
+  display: flex;
+  flex-direction: column;
+}
+
+.numbers {
+  display: flex;
+  justify-content: flex-start;
+}
